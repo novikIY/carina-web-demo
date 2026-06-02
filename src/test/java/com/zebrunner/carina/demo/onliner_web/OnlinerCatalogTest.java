@@ -1,6 +1,8 @@
 package com.zebrunner.carina.demo.onliner_web;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import com.zebrunner.carina.demo.gui.pages.components.ProductCard;
 import com.zebrunner.carina.demo.gui.pages.components.ProductSummary;
 import com.zebrunner.carina.demo.gui.pages.desktop.CatalogPage;
@@ -92,7 +94,7 @@ public class OnlinerCatalogTest implements IAbstractTest {
         if (raw == null) {
             return "";
         }
-        java.util.regex.Matcher m = java.util.regex.Pattern
+        Matcher m = Pattern
                 .compile("\\d+[.,]\\d")
                 .matcher(raw);
         return m.find() ? m.group().replace(',', '.') : "";

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
-
 import com.zebrunner.carina.demo.gui.pages.components.ProductSummary;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

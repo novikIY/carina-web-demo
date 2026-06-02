@@ -1,6 +1,8 @@
 package com.zebrunner.carina.demo.gui.pages.components;
 
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ProductSummary {
 
@@ -39,7 +41,7 @@ public class ProductSummary {
             return "";
         }
         String cleaned = value.replace("\u00A0", " ");
-        java.util.regex.Matcher m = java.util.regex.Pattern
+        Matcher m = Pattern
                 .compile("\\d+(?:\\s\\d+)*[.,]\\d{2}")
                 .matcher(cleaned);
         if (m.find()) {
